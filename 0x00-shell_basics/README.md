@@ -7,3 +7,4 @@
 - ls -nal -> Display current directory contents, including hidden files (starting with .), Long format and with user and group IDs displayed numerically
 - mkdir -> Create directory
 - mv -> Move directory or file to another directory
+- rm -> delete file from a directory
