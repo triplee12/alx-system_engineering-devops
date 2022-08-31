@@ -5,3 +5,4 @@
 - ls -l -> Display current directory contents in a long format
 - ls -al ->   Display current directory contents, including hidden files (starting with .). Use the long format
 - ls -nal -> Display current directory contents, including hidden files (starting with .), Long format and with user and group IDs displayed numerically
+- mkdir -> Create directory
