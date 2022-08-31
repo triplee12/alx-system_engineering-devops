@@ -12,3 +12,4 @@
 - cd - -> change working directory to previous directory
 - ls -al -> display files, directories, including hidden files and long format
 - file -> print type of file
+- ln -> create symbolic link
