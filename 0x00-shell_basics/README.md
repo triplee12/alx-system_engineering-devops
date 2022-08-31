@@ -9,3 +9,4 @@
 - mv -> Move directory or file to another directory
 - rm -> delete file from a directory
 - rmdir -> delete directory
+- cd - -> change working directory to previous directory
