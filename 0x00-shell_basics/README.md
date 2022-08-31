@@ -8,3 +8,4 @@
 - mkdir -> Create directory
 - mv -> Move directory or file to another directory
 - rm -> delete file from a directory
+- rmdir -> delete directory
