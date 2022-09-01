@@ -11,3 +11,4 @@
 - chmod 753 -> allows other users to write and execute
 - chmod --reference -> allows other user to read only
 - chmod a+x */ -> directories permission
+- mkdir -m 751 -> permission to create directory
