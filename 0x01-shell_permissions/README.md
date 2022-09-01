@@ -16,3 +16,4 @@
 - chown -> owner and group permission
 - chown -h -> change owner of a symbolic link
 - chown -from -> if only permission
+- telnet -> open web page in terminal
