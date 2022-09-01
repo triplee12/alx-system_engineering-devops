@@ -13,4 +13,5 @@
 - chmod a+x */ -> directories permission
 - mkdir -m 751 -> permission to create directory
 - chgrp -> change group permission
-- chown -> change owner of a symbolic link
+- chown -> owner and group permission
+- chown -h -> change owner of a symbolic link
