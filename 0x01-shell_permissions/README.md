@@ -10,3 +10,4 @@
 - chmod 007 -> sets all the permission to other users
 - chmod 753 -> allows other users to write and execute
 - chmod --reference -> allows other user to read only
+- chmod a+x */ -> directories permission
