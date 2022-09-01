@@ -8,3 +8,4 @@
 - chmod 754 -> add execute permission to the owner and the group owner and read permission to other users
 - chmod ugo+x -> add execute permission to everybody
 - chmod 007 -> sets all the permission to other users
+- chmod 765 -> allows other users to write and execute
