@@ -12,3 +12,4 @@
 - chmod --reference -> allows other user to read only
 - chmod a+x */ -> directories permission
 - mkdir -m 751 -> permission to create directory
+- chgrp -> change group permission
