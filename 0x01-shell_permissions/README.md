@@ -15,3 +15,4 @@
 - chgrp -> change group permission
 - chown -> owner and group permission
 - chown -h -> change owner of a symbolic link
+- chown -from -> if only permission
