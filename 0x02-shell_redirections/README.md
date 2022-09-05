@@ -12,3 +12,4 @@
 - ls -t | head
 - sort -> sort file in alphabetical order
 - grep -> search for words in file
+- grep -A -> count for a particular word in a file
