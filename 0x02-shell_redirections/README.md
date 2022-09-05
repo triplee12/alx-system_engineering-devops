@@ -15,3 +15,4 @@
 - grep -c -> count for a particular word in a file
 - grep -A -> Go to the next find word
 - grep -v -> escape a certain word in a file
+- grep '^[[:alpha]]' -> display letter only
