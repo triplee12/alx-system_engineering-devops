@@ -8,3 +8,4 @@
 - head -n | tail -n 1 -> read specifice line number
 - ls -la ->
 - duplicate file
+- find -> search for a particular file
