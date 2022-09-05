@@ -20,3 +20,4 @@
 - tr -d -> delete a particular word from a file
 - rev -> reverse words
 - cut -d ':' -f -> display all users and their home directories
+- find . -empty -printf -> find all empty files and directories (not the entire path)
