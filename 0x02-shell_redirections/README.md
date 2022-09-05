@@ -21,3 +21,4 @@
 - rev -> reverse words
 - cut -d ':' -f -> display all users and their home directories
 - find . -empty -printf -> find all empty files and directories (not the entire path)
+- lists all the files with a particular extension
