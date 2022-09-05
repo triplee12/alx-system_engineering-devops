@@ -9,3 +9,4 @@
 - ls -la ->
 - duplicate file
 - find -> search for a particular file
+- ls -t | head
