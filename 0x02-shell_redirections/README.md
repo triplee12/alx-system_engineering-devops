@@ -18,3 +18,4 @@
 - grep '^[[:alpha]]' -> display letter only
 - tr Ac Ze -> replace AZ with ce
 - tr -d -> delete a particular word from a file
+- rev -> reverse words
