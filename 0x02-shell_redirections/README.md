@@ -7,3 +7,4 @@
 - head -n -> print the first given number of line
 - head -n | tail -n 1 -> read specifice line number
 - ls -la ->
+- duplicate file
