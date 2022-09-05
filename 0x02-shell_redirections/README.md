@@ -11,3 +11,4 @@
 - find -> search for a particular file
 - ls -t | head
 - sort -> sort file in alphabetical order
+- grep -> search for words in file
