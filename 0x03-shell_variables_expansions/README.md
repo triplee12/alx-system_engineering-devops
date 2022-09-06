@@ -15,3 +15,4 @@
 - print all possible combinations of two letters except oo
 - convert number from base 10 to base 16
 - encrypt and decrypt text using the rot13 encryption
+- prints every other line from the input, starting with the first line
