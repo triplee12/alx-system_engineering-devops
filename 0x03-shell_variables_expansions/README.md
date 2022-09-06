@@ -5,4 +5,5 @@
 - echo $PATH | tr ":" "\n" | wc -l -> count the number of directories in PATH
 - printenv | less -> print all the environment variables
 - set | less -> print all the local variables
-- great local variable
+- create local variable
+- export var_name -> create global variable
