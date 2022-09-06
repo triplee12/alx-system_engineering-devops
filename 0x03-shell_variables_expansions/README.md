@@ -10,3 +10,4 @@
 - print the result of the additon of two numbers
 - print the result of the division of two numbers
 - print the result of the multiplication of two numbers
+- convert base 2 to base 10
