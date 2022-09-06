@@ -12,3 +12,4 @@
 - print the result of the multiplication of two numbers
 - convert base 2 to base 10
 - convert base 10 to decimal in linux
+- print all possible combinations of two letters except oo
