@@ -7,3 +7,4 @@
 - set | less -> print all the local variables
 - create local variable
 - export var_name -> create global variable
+- print the result of the additon of two numbers
