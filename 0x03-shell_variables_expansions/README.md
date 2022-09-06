@@ -8,3 +8,4 @@
 - create local variable
 - export var_name -> create global variable
 - print the result of the additon of two numbers
+- print the result of the division of two numbers
