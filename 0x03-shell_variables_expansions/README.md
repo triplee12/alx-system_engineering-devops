@@ -4,3 +4,4 @@
 - PATH -> add to path global variable $PATH
 - echo $PATH | tr ":" "\n" | wc -l -> count the number of directories in PATH
 - printenv | less -> print all the environment variables
+- set | less -> print all the local variables
