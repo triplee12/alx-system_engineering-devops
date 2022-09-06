@@ -13,3 +13,4 @@
 - convert base 2 to base 10
 - convert base 10 to decimal in linux
 - print all possible combinations of two letters except oo
+- convert number from base 10 to base 16
