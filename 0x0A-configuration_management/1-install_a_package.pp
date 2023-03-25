@@ -1,4 +1,4 @@
 # Install puppet-lint
-exec { 'pip install flask -v 2.1.0':
+exec { 'pip3 install flask -V 2.1.0':
     path => '/usr/bin'
 }
