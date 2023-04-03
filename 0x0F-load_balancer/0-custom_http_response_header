@@ -5,7 +5,7 @@ apt-get update
 apt-get install -y nginx
 
 mkdir -p /var/www/ebukaejie/html
-echo "Holberton School" > /var/www/ebukaejie/html/index.html
+echo "Hello World!" > /var/www/ebukaejie/html/index.html
 echo "Ceci n'est pas une page" > /var/www/ebukaejie/html/custom_404.html
 
 rm -rf /etc/nginx/sites-available/*
