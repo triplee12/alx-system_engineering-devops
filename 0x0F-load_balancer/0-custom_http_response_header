@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Reconfigure a web02 and managa a custom header
+
+apt-get update
+apt-get install -y nginx
+
+mkdir -p /var/www/ebukaejie/html
+echo "Holberton School" > /var/www/ebukaejie/html/index.html
+echo "Ceci n'est pas une page" > /var/www/ebukaejie/html/custom_404.html
+
+rm -rf /etc/nginx/sites-available/*
+rm -rf /etc/nginx/sites-enabled/*
+
+echo "server {
+  listen 80;
+  listen [::]:80 default_server;
+
+  root /var/www/ebukaejie/html;
+  index index.html;
+
+  server_name ebukaejie.tech www.ebukaejie.tech;
+  rewrite ^/redirect_me$ http://example.com/ permanent;
+
+  error_page 404 /custom_404.html;
+
+  location / {
+    add_header X-Served-By $HOSTNAME;
+  }
+  
+}" > /etc/nginx/sites-available/ebukaejie.config
+
+ln -s /etc/nginx/sites-available/ebukaejie.config /etc/nginx/sites-enabled/
+service nginx restart
