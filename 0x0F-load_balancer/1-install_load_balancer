@@ -2,15 +2,15 @@
 # Install a load balancer
 
 # enable dedicated PPA
-apt-get install -y software-properties-common
-add-apt-repository -y ppa:vbernat/haproxy-2.0
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
 # install haproxy
-apt-get update
-apt-get install -y haproxy=2.0.\*
+sudo apt-get update -y
+sudo apt-get install -y haproxy=2.0.\*
 # enabling haproxy
-echo "ENABLED=1" >> /etc/default/haproxy
+sudo echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 # new brand haproxy loadbalancer
-echo -e "
+sudo echo -e "
 frontend load_balancer
 \tbind *:80
 \tmode http
@@ -19,5 +19,6 @@ backend webserver
 \tbalance roundrobin
 \tserver 138292-web-01 34.234.193.108:80 check
 \tserver 138292-web-02 54.165.46.2:80 check
-" >> /etc/haproxy/haproxy.cfg
-service haproxy start
+" | sudo tee -a /etc/haproxy/haproxy.cfg
+
+sudo service haproxy restart
