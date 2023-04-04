@@ -6,8 +6,8 @@ sudo apt-get install -y nginx
 sudo ufw allow 'Nginx HTTP'
 
 sudo mkdir -p /var/www/ebukaejie/html
-sudo echo "Hello World!" > /var/www/ebukaejie/html/index.html
-sudo echo "Ceci n'est pas une page" > /var/www/ebukaejie/html/custom_404.html
+sudo echo "Hello World!" | sudo tee -a /var/www/ebukaejie/html/index.html
+sudo echo "Ceci n'est pas une page" | sudo tee -a /var/www/ebukaejie/html/custom_404.html
 
 sudo rm -rf /etc/nginx/sites-available/*
 sudo rm -rf /etc/nginx/sites-enabled/*
@@ -15,20 +15,17 @@ sudo rm -rf /etc/nginx/sites-enabled/*
 sudo echo "server {
   listen 80;
   listen [::]:80 default_server;
-
   root /var/www/ebukaejie/html;
   index index.html;
-
   server_name ebukaejie.tech www.ebukaejie.tech;
   rewrite ^/redirect_me$ http://example.com/ permanent;
-
   error_page 404 /custom_404.html;
-
   location / {
     add_header X-Served-By $HOSTNAME;
   }
   
-}" > /etc/nginx/sites-available/ebukaejie.config
+}" | sudo tee -a /etc/nginx/sites-available/ebukaejie.config
 
 sudo ln -s /etc/nginx/sites-available/ebukaejie.config /etc/nginx/sites-enabled/
+
 sudo service nginx restart
