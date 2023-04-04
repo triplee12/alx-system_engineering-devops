@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
 # Reconfigure a web02 and managa a custom header
 
-apt-get update
-apt-get install -y nginx
+sudo apt-get update -y
+sudo apt-get install -y nginx
+sudo ufw allow 'Nginx HTTP'
 
-mkdir -p /var/www/ebukaejie/html
-echo "Hello World!" > /var/www/ebukaejie/html/index.html
-echo "Ceci n'est pas une page" > /var/www/ebukaejie/html/custom_404.html
+sudo mkdir -p /var/www/ebukaejie/html
+sudo echo "Hello World!" > /var/www/ebukaejie/html/index.html
+sudo echo "Ceci n'est pas une page" > /var/www/ebukaejie/html/custom_404.html
 
-rm -rf /etc/nginx/sites-available/*
-rm -rf /etc/nginx/sites-enabled/*
+sudo rm -rf /etc/nginx/sites-available/*
+sudo rm -rf /etc/nginx/sites-enabled/*
 
-echo "server {
+sudo echo "server {
   listen 80;
   listen [::]:80 default_server;
 
@@ -29,5 +30,5 @@ echo "server {
   
 }" > /etc/nginx/sites-available/ebukaejie.config
 
-ln -s /etc/nginx/sites-available/ebukaejie.config /etc/nginx/sites-enabled/
-service nginx restart
+sudo ln -s /etc/nginx/sites-available/ebukaejie.config /etc/nginx/sites-enabled/
+sudo service nginx restart
