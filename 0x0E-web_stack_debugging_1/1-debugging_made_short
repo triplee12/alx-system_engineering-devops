@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Fix missing open port 80 in a container
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo service nginx restart
+sudo pkill -o nginx
