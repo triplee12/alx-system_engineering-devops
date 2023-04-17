@@ -1,0 +1,18 @@
+# vi /etc/sysctl.conf
+net.ipv4.ip_forward=1
+
+sudo sysctl -p
+
+sudo ufw allow proto tcp from any to 100.25.14.119 port 8080
+
+sudo ufw allow 8080/tcp
+
+# sudo vi /etc/ufw/before.rules
+
+*nat
+:PREROUTING ACCEPT [0:0]
+-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
+COMMIT
+
+sudo ufw enable
+sudo service ufw restart
