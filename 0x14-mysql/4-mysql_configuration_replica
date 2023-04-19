@@ -7,7 +7,6 @@
 # This program is also distributed with certain software (including
 # but not limited to OpenSSL) that is licensed under separate terms,
 # as designated in a particular file or component or in included license
-# as designated in a particular file or component or in included license
 # documentation.  The authors of MySQL hereby grant you an additional
 # permission to link the program and your derivative works with the
 # separately licensed software that they have included with MySQL.
@@ -34,9 +33,10 @@ datadir         = /var/lib/mysql
 log-error       = /var/log/mysql/error.log
 # By default we only accept connections from localhost
 #bind-address   = 127.0.0.1
-server-id       = 1
+server-id       = 2
 log_bin         = /var/log/mysql/mysql-bin.log
+binlog_do_db    = tyrell_corp
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
-# Database name to replicate
-binlog_do_db    = tyrell_corp
+# Location of the replica's relay log file
+relay-log       = /var/log/mysql/mysql-relay-bin.log
