@@ -13,7 +13,7 @@ def count_words(subreddit, word_list, hot_list=[], after=None, word_counts={}):
 
     if page_after is None:
         Apiurl = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-        resp = get(Apiurl, headers=headers, allow_redirects=False)
+        resp = requests.get(Apiurl, headers=headers, allow_redirects=False)
         if resp.status_code == 200:
             for child in resp.json()['data']['children']:
                 i = 0
@@ -31,7 +31,7 @@ def count_words(subreddit, word_list, hot_list=[], after=None, word_counts={}):
         Apiurl = ('https://www.reddit.com/r/{}/hot.json?after={}'
                .format(subreddit,
                        page_after))
-        resp = get(Apiurl, headers=headers, allow_redirects=False)
+        resp = requests.get(Apiurl, headers=headers, allow_redirects=False)
 
         if resp.status_code == 200:
             for child in resp.json()['data']['children']:
