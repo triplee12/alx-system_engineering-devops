@@ -6,7 +6,7 @@ import requests
 def recurse(subreddit, hot_list=[], after=None):
     """ Recursively call endpoint """
     headers = {'User-Agent': 'Mozilla/5.0'}
-    Apiurl = 'https://www.reddit.com/r/{subreddit}/hot.json'.format(subreddit)
+    Apiurl = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     params = {'limit': 100}
     if after:
         params['after'] = after
