@@ -1,6 +1,6 @@
 file {'/var/www/html/index.html':
   ensure  => file,
-  mode    => '0666',
+  mode    => '0644',
   content => '<title>Holberton &#8211; Just another WordPress site</title>
 <link rel="alternate" type="application/rss+xml" title="Holberton &raquo; Feed" href="http://127.0.0.1/?feed=rss2" />
 <link rel="alternate" type="application/rss+xml" title="Holberton &raquo; Comments Feed" href="http://127.0.0.1/?feed=comments-rss2" />
