@@ -1,12 +1,8 @@
-# Create index.html file
-file {'/var/www/html/index.html':
-    ensure  => file,
-    mode    => '0644',
-    content => '<html><head><title>Web Stack Debugging 3</title></head><body><h1>Hello, World!</h1></body></html>'
-}
-
-# Apache restart
-exec {'Apache restart':
-    command => 'sudo service apache2 restart',
-    path    => ['/usr/bin', '/usr/sbin',]
+# Web stack debugging 3
+exec { 'debug wordpress':
+    environment => ['Dir=/var/www/html/wp-settings.php',
+        'OLD_PHPP=phpp', 'NEW_PHP=php'],
+    command     => 'sudo sed -i "s/$OLD_PHPP/$NEW_PHP/" $DIR',
+    path        => ['/usr/bin', '/bin', '/usr/sbin'],
+    returns     => [0, 1]
 }
