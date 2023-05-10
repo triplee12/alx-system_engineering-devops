@@ -2,7 +2,7 @@
 """ Count keywords """
 import requests
 
-def count_words(subreddit, word_list, hot_list=[], after=None, word_counts={}):
+def count_words(subreddit, word_list, word_count=[], page_after=None):
     """ Count keywords """
     headers = {'User-Agent': 'Mozilla/5.0'}
     word_list = [word.lower() for word in word_list]
