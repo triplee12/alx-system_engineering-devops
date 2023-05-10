@@ -1,4 +1,4 @@
-file {'var/www/html/index.html':
+file {'/var/www/html/index.html':
   ensure  => file,
   mode    => '0666',
   content => '<title>Holberton &#8211; Just another WordPress site</title>
