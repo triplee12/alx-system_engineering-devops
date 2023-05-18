@@ -1,7 +1,7 @@
 # Increase limit
 
 exec { 'Increase limit':
-  command => 'sed -i "s/15/1000000/" /etc/default/nginx',
+  command => 'sed -i "s/15/100000/" /etc/default/nginx',
   path    => ['/usr/bin', '/bin',],
   returns => [0,1]
 }
