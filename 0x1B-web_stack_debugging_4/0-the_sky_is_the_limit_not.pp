@@ -6,11 +6,10 @@ exec { 'Increase limit':
   returns => [0,1]
 }
 
-# Start nginx
-service { 'Nginx':
+service { 'nginx':
   ensure     => running,
   enable     => true,
   hasrestart => true,
   restart    => '/usr/sbin/service nginx restart',
-  subscribe  => Exec[ 'Increase limit']
+  subscribe  => Exec['Increase limit'],
 }
